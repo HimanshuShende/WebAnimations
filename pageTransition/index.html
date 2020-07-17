@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Transition | Home |CSS Effects</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <span class="loader"></span>
+    <div class="exit-page"> 
+    </div>
+    <div class="enter-page"> 
+    </div>
+
+    <!-- Main Content -->
+    <section>
+        <nav>
+            <span></span>
+            <span></span>
+            <ul>
+                <li class="nav-active"> <a href="index.html" class="nav-link">Home</a> <span class="nav-link-fill"></span>
+                </li>
+                <li> <a href="about.html" class="nav-link">About</a> <span class="nav-link-fill"></span> </li>
+                <li> <a href="contact.html" class="nav-link">Contact</a> <span class="nav-link-fill"></span> </li>
+            </ul>
+            <span></span>
+        </nav>
+    </section>
+    <script>
+        document.getElementsByClassName("loader")[0].style['opacity'] = '1';
+        document.getElementsByClassName("enter-page")[0].style['opacity'] = '1';
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>

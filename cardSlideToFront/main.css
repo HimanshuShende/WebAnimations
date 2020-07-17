@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.card-holder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    /* border: 1px solid black; */
+}
+
+.card {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 450px;
+    max-height: 550px;
+    /* border: 1px solid red; */
+    margin: 10px;
+    box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.card-img{
+    /* border: 1px solid black; */
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    background-color: white;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.card-img svg{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-descr {
+    position: absolute;
+    z-index: -1;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 80%;
+    left: 50%;
+    bottom: 0;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    transform: translate(-50%, 30%) rotateX(180deg);
+    -webkit-transform: translate(-50%, 30%) rotateX(180deg);
+    -moz-transform: translate(-50%, 30%) rotateX(180deg);
+    -ms-transform: translate(-50%, 30%) rotateX(180deg);
+    -o-transform: translate(-50%, 30%) rotateX(180deg);
+    overflow: hidden;
+    transition: all 0.7s;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+}
+
+/* .card:hover .card-descr{
+    transform: translate(-50%, 50%) rotateX(0deg);
+    -webkit-transform: translate(-50%, 50%) rotateX(0deg);
+    -moz-transform: translate(-50%, 50%) rotateX(0deg);
+    -ms-transform: translate(-50%, 50%) rotateX(0deg);
+    -o-transform: translate(-50%, 50%) rotateX(0deg);
+} */
+
+div.card-descr::after,
+div.card-descr::before{
+    content: '';
+    position: absolute;
+    background-color: red;
+    width: 100%;
+    height: 3px;
+    z-index: -3;
+}
+
+div.card-descr::before{
+    top: 0;
+    left: 0;
+}
+
+div.card-descr::after{
+    bottom: 0;
+    left: 0;
+}

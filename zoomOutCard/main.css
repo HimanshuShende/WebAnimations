@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    min-height: 10vh;
+    padding: 10px;
+    width: 98vw;
+    height: 100vh;
+    margin: 10px auto;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zoomOutCard{
+    position: relative;
+    /*border: 1px solid black;
+    */width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    margin: 0 auto;
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    box-shadow: inset 2px 11px 18px rgba(0, 0, 0, 0.2),
+                0px 0px 0px 0px rgba(0, 0, 0, 0);
+
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+
+    overflow: hidden;
+    z-index: 2;
+}
+
+.zoomOutCard:hover{
+    /*max-height: 500px;*/
+    max-height: 420px;
+    box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0),
+                1px 8px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+}
+
+.cardHeader, .cardBody, .cardFooter{
+    z-index: -1;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardHeader{
+    box-shadow: inset 2px 11px 18px rgba(0, 0, 0, 0.2),                
+                0px 0px 0px 0px rgba(0, 0, 0, 0);
+    background: rgb(255, 166, 0);
+    color: white;
+    min-height: 70px;
+    text-align: center;
+    font-size: 30px;
+    padding: 7px 15px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.zoomOutCard:hover .cardHeader{
+    box-shadow: none;
+}
+.cardBody{
+    color: rgb(0, 217, 255);
+    font-size: 21px;
+    text-align: justify;
+    margin: 10px 10px; 
+    padding: 10px 15px;
+    overflow: hidden;
+}
+.zoomOutCard:hover .cardBody{
+    height: fit-content;
+}
+.cardFooter{
+    border-top: 2px solid rgb(219, 219, 219);
+    padding:10px;
+    position: absolute;
+    bottom: 0px;
+}
+.cardFooter img {
+    width: 100%;
+    object-fit: cover;
+    max-width: 100px;
+    max-height: 100px;
+    margin: 5px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.zoomOutCard:hover .cardFooter img {
+}
+.cardFooter p{
+}
